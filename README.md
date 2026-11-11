@@ -1,4 +1,4 @@
-# kosm_cs2
+# kosm_counter_strike_2
 
 Counter-Strike 2 for kosm: one font for the game's Panorama UI. The app writes the game's
 global fontconfig replacements file, `42-repl-global.conf`, with two rules per replaced family:
