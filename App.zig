@@ -125,7 +125,7 @@ test "without a font nothing is written, and an empty replaced list fails" {
     var fixture: Fixture = undefined;
     try fixture.init();
     defer fixture.deinit();
-    try from(kosm.Theme.from(.{ .black = kosm.hex("000000"), .white = kosm.hex("ffffff") }, .dark)).apply(&fixture.output);
+    try from(kosm.Theme.from(.{ .palette = .{ .black = kosm.hex("000000"), .white = kosm.hex("ffffff") }, .mode = .dark })).apply(&fixture.output);
     try testing.expectEqual(0, fixture.plan.files.items.len);
     const empty: App = .{ .font = "Maple Mono", .replaced = &.{} };
     try testing.expectError(error.AppFailed, empty.apply(&fixture.output));
