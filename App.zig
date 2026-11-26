@@ -41,6 +41,12 @@ const Edit = struct {
     string: []const u8,
 };
 
+/// What `kosm doctor` checks: Steam installed, as the `steam` command.
+pub fn checkup(self: App) kosm.Checkup {
+    _ = self;
+    return .{ .program = .{ .command = "steam" } };
+}
+
 /// Writes a rule pair per replaced family. Without `font`, nothing is written.
 pub fn apply(self: App, output: *kosm.Output) !void {
     const font = self.font orelse return;

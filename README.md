@@ -9,6 +9,8 @@ apply again afterwards. Restart the game to see the change.
 
 `from(theme)` leaves the font alone, since a theme holds no fonts; set `font` in the kosmos.
 
+`kosm doctor` checks that Steam is installed, as the `steam` command.
+
 ## Fields
 
 | Field | Default |
